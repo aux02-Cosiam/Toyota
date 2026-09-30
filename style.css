@@ -716,3 +716,72 @@ footer .arriba {
     text-align: center;
     margin-right: 10px;
 }
+
+/* =========================================
+   DISEÑO RESPONSIVO (TELÉFONOS Y TABLETS)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    
+    /* Tipografía y espacios generales */
+    h1 { font-size: 32px !important; }
+    h2 { font-size: 26px !important; }
+    .contenido-seccion { padding: 40px 20px !important; }
+
+    /* Convertir TODO a una sola columna (Aplica para Alcances y REPSE) */
+    .fila {
+        flex-direction: column !important;
+        gap: 30px;
+    }
+    
+    .col {
+        width: 100% !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    /* Portada (Banner) */
+    .inicio {
+        height: auto !important;
+        min-height: 100vh;
+        padding-top: 120px !important;
+        padding-bottom: 50px !important;
+        text-align: center;
+    }
+
+    /* Ventana Modal del Calendario (Scroll horizontal) */
+    .modal-contenido {
+        width: 95% !important;
+        height: 85vh !important;
+    }
+    
+    .modal-tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .tab-btn {
+        flex: 1 1 100%;
+        margin-bottom: 5px;
+    }
+
+    /* Directorio de Contactos (7 tarjetas alineadas) */
+    .contenedor-tarjetas-contacto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-contacto {
+        width: 100% !important;
+        max-width: 350px !important;
+        margin-bottom: 15px;
+    }
+
+    /* Botones 100% de ancho */
+    .pdf-btn, .btn-calendario-rojo {
+        width: 100% !important;
+        max-width: 100% !important;
+        font-size: 15px !important;
+        padding: 15px !important;
+        justify-content: center;
+    }
+}
