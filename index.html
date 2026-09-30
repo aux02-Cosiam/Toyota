@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosiam x Toyota | Presentación 2026-2027</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#inicio" onclick="seleccionar()" style="display: flex; align-items: center;">
+                    <img src="img/logo.jpg" alt="Logo Cosiam" class="logo-header">
+                    <span class="text-red" style="margin: 0 15px; font-family: 'Righteous', cursive; font-size: 20px;">X</span>
+                    <img src="img/logo-Toyota.png" alt="Logo Toyota" class="logo-header">
+                </a>
+            </div>
+            <div class="menu-toggle" onclick="mostrarOcultarMenu()">☰</div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#economica" onclick="seleccionar()">INVERSIÓN</a></li>
+                    <li><a href="#resumen" onclick="seleccionar()">RESUMEN</a></li>
+                    <li><a href="#actividades" onclick="seleccionar()">ACTIVIDADES</a></li>
+                    <li><a href="#condiciones" onclick="seleccionar()">CONDICIONES</a></li>
+                    <li><a href="#calendario" onclick="seleccionar()">CALENDARIO</a></li>
+                    <li><a href="#turnos" onclick="seleccionar()">TURNOS</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <!-- 1. PRESENTACIÓN -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            
+            <!-- Contenedor de Logos Alianza -->
+            <div class="alianza-logos">
+                <img src="img/logo.jpg" alt="Grupo Cosiam" class="logo-banner">
+                <img src="img/logo-Toyota.png" alt="Toyota" class="logo-banner toyota-ajuste">
+            </div>
+
+            <h1>Póliza de mantenimiento preventivo 2026-2027 Toyota</h1>
+            <h2>Propuesta Comercial para Comedores TMMGT</h2>
+            <a href="#economica" class="btn-azul">Ver Propuesta <i class="fa-solid fa-arrow-down"></i></a>
+        </div>
+    </section>
+
+    <!-- 2. PROPUESTA ECONÓMICA -->
+    <section id="economica" class="seccion-clara portafolio">
+        <div class="contenido-seccion">
+            <h2>Propuesta Económica</h2>
+            <p style="text-align:center; margin-bottom:40px; color: var(--text-muted);">Tres escenarios diseñados a la medida. Seleccione una propuesta para visualizar el impacto financiero anual y descargar los desgloses.</p>
+            
+            <div class="galeria pricing-galeria">
+                <!-- Propuesta A -->
+                <div class="proyecto price-card" data-plan="A" data-price="5450999.97" data-discount="0">
+                    <div class="overlay-price">
+                        <h3>Propuesta A</h3>
+                        <p class="subtitle-price">Tarifa Base</p>
+                        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">Cobertura total sin compromiso a largo plazo.</p>
+                        
+                        <!-- Botones Controlados por JS -->
+                        <div class="pdf-links">
+                            <p class="pdf-title">Visualizar Cotizaciones:</p>
+                            <button onclick="abrirPDF(event, 'pdfs/COT_D28082601-A_CENTRAL.pdf')" class="pdf-btn"><i class="fa-solid fa-file-pdf"></i> Central</button>
+                            <button onclick="abrirPDF(event, 'pdfs/01_COT_D28082603-ENSAMBLE_A.pdf')" class="pdf-btn"><i class="fa-solid fa-file-pdf"></i> Ensamble</button>
+                            <button onclick="abrirPDF(event, 'pdfs/01_D28082602-A_PRENSAS.pdf')" class="pdf-btn"><i class="fa-solid fa-file-pdf"></i> Prensas</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Propuesta B -->
+                <div class="proyecto price-card active-price" data-plan="B" data-price="4633349.97" data-discount="817650">
+                    <div class="badge-recomendado">RECOMENDADA</div>
+                    <div class="overlay-price">
+                        <h3>Propuesta B</h3>
+                        <p class="subtitle-price text-red">-15% Descuento</p>
+                        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">Ahorro directo en póliza anual. Máxima flexibilidad.</p>
+                        
+                        <div class="pdf-links">
+                            <p class="pdf-title">Visualizar Cotizaciones:</p>
+                            <button onclick="abrirPDF(event, 'pdfs/COT_D28082601-B_CENTRAL.pdf')" class="pdf-btn"><i class="fa-solid fa-file-pdf"></i> Central</button>
+                            <button onclick="abrirPDF(event, 'pdfs/02_COT_D28082603-B_COMEDOR_ENSAMBLE.pdf')" class="pdf-btn"><i class="fa-solid fa-file-pdf"></i> Ensamble</button>
+                            <button onclick="abrirPDF(event, 'pdfs/02_D28082602-B_COMEDOR_PRENSAS.pdf')" class="pdf-btn"><i class="fa-solid fa-file-pdf"></i> Prensas</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Propuesta C -->
+                <div class="proyecto price-card" data-plan="C" data-price="4469819.98" data-discount="981179.99">
+                    <div class="overlay-price">
+                        <h3>Propuesta C</h3>
+                        <p class="subtitle-price">-18% Descuento</p>
+                        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">Contrato forzoso mínimo 2 años. Ajuste por INEGI.</p>
+                        
+                        <div class="pdf-links">
+                            <p class="pdf-title">Visualizar Cotizaciones:</p>
+                            <button onclick="abrirPDF(event, 'pdfs/COT_D28082601-C_COMEDOR_CENTRAL.pdf')" class="pdf-btn"><i class="fa-solid fa-file-pdf"></i> Central</button>
+                            <button onclick="abrirPDF(event, 'pdfs/03_COT_D28082603-C_COMEDOR_ENSAMBLE.pdf')" class="pdf-btn"><i class="fa-solid fa-file-pdf"></i> Ensamble</button>
+                            <button onclick="abrirPDF(event, 'pdfs/03_D28082602-C_COMEDOR_PRENSAS.pdf')" class="pdf-btn"><i class="fa-solid fa-file-pdf"></i> Prensas</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard de Resultados -->
+            <div class="results-dashboard" style="margin-top: 50px;">
+                <div class="result-box info">
+                    <h4>Inversión Anual (Subtotal)</h4>
+                    <h2 id="display-price" class="text-blue">$4,633,349.97 MXN</h2>
+                </div>
+                <div class="result-box highlight">
+                    <h4>Ahorro Directo vs Base</h4>
+                    <h2 id="display-savings" class="text-red">$817,650.00 MXN</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. RESUMEN GENERAL -->
+    <section id="resumen" class="seccion-oscura sobremi">
+        <div class="contenido-seccion">
+            <h2>Resumen General</h2>
+            <p style="text-align:center;">Visión global del proyecto: 3 comedores, 215 equipos y prevención absoluta.</p>
+            
+            <div class="grid-3" style="margin-top: 40px; margin-bottom: 40px;">
+                <div class="kpi-card interes">
+                    <i class="fa-solid fa-map-location-dot text-blue"></i>
+                    <h3>3 Comedores</h3>
+                    <span style="color:var(--text-muted);">Central, Prensas y Ensamble bajo cobertura total.</span>
+                </div>
+                <div class="kpi-card interes">
+                    <i class="fa-solid fa-layer-group text-blue"></i>
+                    <h3>215 Equipos</h3>
+                    <span style="color:var(--text-muted);">Intervención en todo el inventario.</span>
+                </div>
+                <div class="kpi-card interes">
+                    <i class="fa-solid fa-screwdriver-wrench text-blue"></i>
+                    <h3>Cobertura de mantenimiento preventivo</h3>
+                    <span style="color:var(--text-muted);">Conforme a calendario establecido.</span>
+                </div>
+            </div>
+
+            <!-- Acordeón Inventario -->
+            <div class="acordeon-contenedor">
+                <div class="acordeon-item">
+                    <button class="acordeon-cabecera">
+                        <span><i class="fa-solid fa-utensils text-blue" style="margin-right:10px;"></i> Comedor Central | 91 Equipos</span>
+                        <i class="fa-solid fa-chevron-down icono-giro"></i>
+                    </button>
+                    <div class="acordeon-contenido">
+                        <div class="desglose-grid">
+                            <ul>
+                                <li><strong class="text-dark">Alta Gama:</strong> Rational (SCCWE102G, SCC101G) y Unox (XESW-03HS).</li>
+                                <li><strong class="text-dark">Refrigeración:</strong> Cámaras y Mesas Traulsen, Vitrinas Federal.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="acordeon-item">
+                    <button class="acordeon-cabecera">
+                        <span><i class="fa-solid fa-cogs text-blue" style="margin-right:10px;"></i> Comedor Ensamble | 73 Equipos</span>
+                        <i class="fa-solid fa-chevron-down icono-giro"></i>
+                    </button>
+                    <div class="acordeon-contenido">
+                        <div class="desglose-grid">
+                            <ul>
+                                <li><strong class="text-dark">Inteligentes:</strong> Rational iCombi Pro 201E e iVario Pro XL.</li>
+                                <li><strong class="text-dark">Líneas de Servicio:</strong> Módulos eléctricos resistivos HWBI-5.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="acordeon-item">
+                    <button class="acordeon-cabecera">
+                        <span><i class="fa-solid fa-industry text-blue" style="margin-right:10px;"></i> Comedor Prensas | 51 Equipos</span>
+                        <i class="fa-solid fa-chevron-down icono-giro"></i>
+                    </button>
+                    <div class="acordeon-contenido">
+                        <div class="desglose-grid">
+                            <ul>
+                                <li><strong class="text-dark">Cocción:</strong> Horno Rational iCombi Classic y Unox Dely.<span style="display:none;"></span></li>
+                                <li><strong class="text-dark">Refrigeración:</strong> Equipos Euroquip, Asber y Parker.<span style="display:none;"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ACTIVIDADES A REALIZAR -->
+    <section id="actividades" class="seccion-clara curriculum">
+        <div class="contenido-seccion">
+            <h2>Actividades a Realizar</h2>
+            <p style="text-align:center; margin-bottom:40px; color: var(--text-muted);">Alcance técnico considerado para los mantenimientos preventivos y protocolización de entregables.</p>
+            
+            <div class="fila">
+                <!-- Columna Izquierda: Ejecución Técnica -->
+                <div class="col" style="margin-bottom: 20px;">
+                    <div class="info-panel" style="padding: 30px; height: 100%; background-color: #ffffff;">
+                        <h3 style="color: var(--brand-blue-dark); margin-bottom: 25px; font-family: 'Righteous', cursive; font-size: 22px;">
+                            <i class="fa-solid fa-screwdriver-wrench text-blue" style="margin-right: 10px;"></i> Ejecución Técnica
+                        </h3>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class="fa-solid fa-check text-red" style="margin-top: 4px; margin-right: 12px;"></i> 
+                                <span style="color: var(--text-muted);"><strong>Inspección visual y funcional</strong> del equipo.</span>
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class="fa-solid fa-check text-red" style="margin-top: 4px; margin-right: 12px;"></i> 
+                                <span style="color: var(--text-muted);"><strong>Limpieza técnica</strong> de componentes y áreas de trabajo.</span>
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class="fa-solid fa-check text-red" style="margin-top: 4px; margin-right: 12px;"></i> 
+                                <span style="color: var(--text-muted);"><strong>Revisión y ajuste</strong> de conexiones eléctricas, mecánicas, hidráulicas y/o de gas, según corresponda.</span>
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class="fa-solid fa-check text-red" style="margin-top: 4px; margin-right: 12px;"></i> 
+                                <span style="color: var(--text-muted);"><strong>Verificación del funcionamiento</strong> de componentes principales y dispositivos de seguridad.</span>
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class="fa-solid fa-check text-red" style="margin-top: 4px; margin-right: 12px;"></i> 
+                                <span style="color: var(--text-muted);"><strong>Revisión de desgaste</strong>, fugas, ruidos o condiciones anormales de operación de acuerdo al equipo.</span>
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class="fa-solid fa-check text-red" style="margin-top: 4px; margin-right: 12px;"></i> 
+                                <span style="color: var(--text-muted);"><strong>Ajuste y lubricación</strong> de componentes cuando sea requerido.</span>
+                            </li>
+                            <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                                <i class="fa-solid fa-check text-red" style="margin-top: 4px; margin-right: 12px;"></i> 
+                                <span style="color: var(--text-muted);"><strong>Pruebas de funcionamiento</strong> y operación del equipo.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Columna Derecha: Documentación y PDF -->
+                <div class="col" style="margin-bottom: 20px;">
+                    <div class="info-panel" style="padding: 30px; height: 100%; border-left-color: var(--accent-red); background-color: #ffffff;">
+                        <h3 style="color: var(--brand-blue-dark); margin-bottom: 25px; font-family: 'Righteous', cursive; font-size: 22px;">
+                            <i class="fa-solid fa-file-signature text-red" style="margin-right: 10px;"></i> Reporte de Servicio
+                        </h3>
+                        
+                        <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 15px;">
+                            Durante la ejecución de los mantenimientos preventivos se generará un reporte de servicio en el que se documentarán las actividades realizadas y las observaciones correspondientes.
+                        </p>
+                        <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 35px;">
+                            Al finalizar cada servicio, se solicitará la <strong>firma del personal designado por Toyota</strong> como evidencia de conformidad con las actividades realizadas. Posteriormente, el reporte será enviado vía correo electrónico para su seguimiento y control.
+                        </p>
+                        
+                        <!-- Botón para abrir el PDF del ejemplo -->
+                        <div style="text-align: center; margin-top: auto;">
+                            <button onclick="abrirPDF(event, 'pdfs/REPORTE DE SERVICIO EJEMPLO .pdf')" class="pdf-btn">
+                                <i class="fa-solid fa-file-pdf"></i> Ver Ejemplo de Reporte
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. ALCANCE Y BENEFICIOS DEL SERVICIO -->
+    <section id="condiciones" class="seccion-clara sobremi">
+        <div class="contenido-seccion">
+            <h2>Alcance de Servicio</h2>
+            <p style="text-align:center; margin-bottom:50px; color: var(--text-muted);">Lineamientos operativos y cobertura integral de la Póliza de Mantenimiento.</p>
+            
+            <div class="fila" style="margin-bottom: 50px; gap: 30px;">
+                <!-- Columna 1: Cobertura Operativa -->
+                <div class="col">
+                    <h3 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; margin-bottom: 20px; font-size: 24px;">
+                        <i class="fa-solid fa-gears text-blue" style="margin-right: 10px;"></i> Cobertura y Refacciones
+                    </h3>
+                    <ul class="lista-alcance">
+                        <li><strong>Mantenimiento Preventivo:</strong> Servicios realizados conforme a la frecuencia y calendario acordados.</li>
+                        <li><strong>Mano de Obra Incluida:</strong> Instalación de refacciones sin costo adicional durante la vigencia de la póliza.</li>
+                        <li><strong>Insumos Incluidos:</strong> Líquidos y consumibles menores necesarios para los mantenimientos estándar.</li>
+                        <li><strong>Refacciones:</strong> Se cotizan por separado para autorización previa.</li>
+                    </ul>
+                </div>
+                
+                <!-- Columna 2: Logística y Tiempos -->
+                <div class="col">
+                    <h3 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; margin-bottom: 20px; font-size: 24px;">
+                        <i class="fa-solid fa-stopwatch text-blue" style="margin-right: 10px;"></i> Logística y Tiempos
+                    </h3>
+                    <ul class="lista-alcance">
+                        <li><strong>Atención de Correctivos:</strong> Cuando sea posible, las fallas detectadas durante una visita se atienden en el mismo servicio.</li>
+                        <li><strong>Tiempo de Respuesta:</strong> Atención a reportes en un máximo de 12 horas hábiles.</li>
+                        <li><strong>Reportes Técnicos:</strong> Entrega de reporte con actividades realizadas, estado de los equipos y recomendaciones.</li>
+                        <li><strong>Programación Flexible:</strong> Mantenimientos coordinados de común acuerdo, procurando no afectar la operación.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tarjetas Inferiores Estilo Clean -->
+            <div class="grid-3">
+                <div class="card-beneficio-clean">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h4>Maximización</h4>
+                    <p>Mayor vida útil y conservación del rendimiento original.</p>
+                </div>
+                <div class="card-beneficio-clean">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    <h4>Trazabilidad</h4>
+                    <p>Historial de servicio y bitácoras de limpieza actualizadas.</p>
+                </div>
+                <div class="card-beneficio-clean">
+                    <i class="fa-solid fa-headset"></i>
+                    <h4>Garantía Operativa</h4>
+                    <p>Prohibición estricta de canibalización de piezas entre equipos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. BENEFICIOS DE LA PÓLIZA -->
+    <section id="beneficios" class="seccion-oscura portafolio">
+        <div class="contenido-seccion">
+            <h2>Beneficios de la Póliza</h2>
+            <p style="text-align:center; margin-bottom:50px; color: var(--text-muted);">Impacto directo en la eficiencia, seguridad y durabilidad de las cocinas industriales de TMMGT.</p>
+            
+            <div class="grid-4">
+                <!-- 1 -->
+                <div class="card-beneficio-clean" style="padding: 30px 15px;">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h4 style="font-size: 18px;">Atención prioritaria</h4>
+                    <p style="font-size: 13px;">Respuesta preferente ante reportes e incidencias operativas.</p>
+                </div>
+                
+                <!-- 2 -->
+                <div class="card-beneficio-clean" style="padding: 30px 15px;">
+                    <i class="fa-solid fa-industry"></i>
+                    <h4 style="font-size: 18px;">Continuidad operativa</h4>
+                    <p style="font-size: 13px;">Reducción de tiempos de paro mediante atención oportuna de fallas.</p>
+                </div>
+
+                <!-- 3 -->
+                <div class="card-beneficio-clean" style="padding: 30px 15px;">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h4 style="font-size: 18px;">Prevención de fallas</h4>
+                    <p style="font-size: 13px;">Identificación anticipada de condiciones que puedan afectar la operación.</p>
+                </div>
+
+                <!-- 4 -->
+                <div class="card-beneficio-clean" style="padding: 30px 15px;">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    <h4 style="font-size: 18px;">Mayor vida útil</h4>
+                    <p style="font-size: 13px;">Conservación del desempeño y funcionamiento adecuado de los equipos.</p>
+                </div>
+
+                <!-- 5 -->
+                <div class="card-beneficio-clean" style="padding: 30px 15px;">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <h4 style="font-size: 18px;">Planeación y control</h4>
+                    <p style="font-size: 13px;">Programación de mantenimientos durante el año, facilitando la organización.</p>
+                </div>
+
+                <!-- 6 -->
+                <div class="card-beneficio-clean" style="padding: 30px 15px;">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <h4 style="font-size: 18px;">Seguimiento por equipo</h4>
+                    <p style="font-size: 13px;">Historial de servicios, hallazgos y recomendaciones para toma de decisiones.</p>
+                </div>
+
+                <!-- 7 -->
+                <div class="card-beneficio-clean" style="padding: 30px 15px;">
+                    <i class="fa-solid fa-user-gear"></i>
+                    <h4 style="font-size: 18px;">Respaldo especializado</h4>
+                    <p style="font-size: 13px;">Asesoría para la correcta operación, cuidado y conservación de los equipos.</p>
+                </div>
+
+                <!-- 8 -->
+                <div class="card-beneficio-clean" style="padding: 30px 15px;">
+                    <i class="fa-solid fa-toolbox"></i>
+                    <h4 style="font-size: 18px;">Atención integral en sitio</h4>
+                    <p style="font-size: 13px;">Aprovechamiento de las visitas programadas para revisar y atender incidencias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CERTIFICACIONES Y SEGURIDAD -->
+    <section id="certificaciones" class="seccion-clara curriculum">
+        <div class="contenido-seccion">
+            <h2>Certificaciones Oficiales</h2>
+            <p style="text-align:center; margin-bottom:50px; color: var(--text-muted);">Respaldo técnico directo de los fabricantes líderes en la industria gastronómica.</p>
+            
+            <!-- Cuadrícula de 4 Certificaciones -->
+            <div class="grid-4" style="margin-bottom: 40px;">
+                
+                <!-- Certificación 1 -->
+                <div class="card-beneficio-clean" style="padding: 30px 20px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 20px; margin-bottom: 15px;">Winterhalter</h3>
+                        <p style="font-size: 14px; margin-bottom: 25px;">Centro de servicio autorizado. Distribución, soporte y refacciones originales.</p>
+                    </div>
+                    <!-- Botón para abrir PDF -->
+                    <button onclick="abrirPDF(event, 'pdfs/winterhalter.pdf')" class="pdf-btn" style="margin-top: auto;">
+                        <i class="fa-solid fa-file-pdf"></i> Ver Certificado
+                    </button>
+                </div>
+                
+                <!-- Certificación 2 -->
+                <div class="card-beneficio-clean" style="padding: 30px 20px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 20px; margin-bottom: 15px;">Rational</h3>
+                        <p style="font-size: 14px; margin-bottom: 25px;">Service Partner calificado para reparaciones y servicios en garantía.</p>
+                    </div>
+                    <button onclick="abrirPDF(event, 'pdfs/Rational.pdf')" class="pdf-btn" style="margin-top: auto;">
+                        <i class="fa-solid fa-file-pdf"></i> Ver Certificado
+                    </button>
+                </div>
+
+                <!-- Certificación 3 -->
+                <div class="card-beneficio-clean" style="padding: 30px 20px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 20px; margin-bottom: 15px;">Zumex</h3>
+                        <p style="font-size: 14px; margin-bottom: 25px;">Soporte y mantenimiento profesional bajo políticas rigurosas de la marca.</p>
+                    </div>
+                    <button onclick="abrirPDF(event, 'pdfs/ZUMEX.pdf')" class="pdf-btn" style="margin-top: auto;">
+                        <i class="fa-solid fa-file-pdf"></i> Ver Certificado
+                    </button>
+                </div>
+
+                <!-- Certificación 4 -->
+                <div class="card-beneficio-clean" style="padding: 30px 20px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 20px; margin-bottom: 15px;">Middleby</h3>
+                        <p style="font-size: 14px; margin-bottom: 25px;">Distribuidor autorizado para servicio y validación de garantías (Pitco, Blodgett, TurboChef, etc.).</p>
+                    </div>
+                    <button onclick="abrirPDF(event, 'pdfs/MIDDLEBY.pdf')" class="pdf-btn" style="margin-top: auto;">
+                        <i class="fa-solid fa-file-pdf"></i> Ver Certificado
+                    </button>
+                </div>
+                
+            </div>
+
+            <!-- Nota de Capacitación Constante y DC3 (Rediseñada estilo imagen) -->
+            <div class="info-panel" style="text-align: center; border: none; border-bottom: 6px solid var(--brand-blue-dark); border-radius: 8px; padding: 40px; background-color: #ffffff; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                <strong style="color: var(--brand-blue-dark); font-size: 22px; display: block; margin-bottom: 15px; font-family: 'Righteous', cursive;">
+                    <i class="fa-solid fa-user-shield text-blue" style="margin-right: 8px;"></i> Competencias y Seguridad DC3
+                </strong> 
+                <p style="font-size: 16px; color: #111111; line-height: 1.6; margin: 0; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    Nuestro equipo técnico cuenta con certificaciones DC3 y se mantiene en capacitación constante, fortaleciendo continuamente sus conocimientos y habilidades para brindar servicios seguros, profesionales y de calidad.
+                </p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- 7.5 CUMPLIMIENTO LEGAL REPSE -->
+    <section id="repse" class="seccion-clara">
+        <div class="contenido-seccion">
+            <h2>Cumplimiento Legal y REPSE</h2>
+            <p style="text-align:center; margin-bottom:50px; color: var(--text-muted); max-width: 800px; margin-left: auto; margin-right: auto;">
+                Alineación total con las reformas de subcontratación laboral (Art. 13 al 15 de la LFT) garantizando servicios especializados seguros y transparentes.
+            </p>
+            
+            <div class="fila" style="align-items: center;">
+                
+                
+                <!-- Tarjeta con Botones de PDF -->
+                <div class="col">
+                    <div style="background-color: #ffffff; padding: 40px 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-top: 5px solid var(--accent-red); text-align: center;">
+                        <img src="./img/logo.jpg" alt="Logo Cosiam" style="height: 50px; width: auto; margin-bottom: 25px;">
+                        <h4 style="color: var(--brand-blue-dark); font-size: 18px; margin-bottom: 25px; font-weight: 700;">Documentación Legal Probatoria</h4>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <!-- Botón 1 -->
+                            <button onclick="abrirPDF(event, 'pdfs/CARTA REPSE TOYOTA.pdf')" class="pdf-btn" style="width: 100%; padding: 14px; background-color: #f8f9fa; color: #333; border: 1px solid #dee2e6;">
+                                <i class="fa-solid fa-file-pdf" style="color: var(--accent-red);"></i> Carta Descriptiva REPSE - Toyota
+                            </button>
+                            
+                            <!-- Botón 2 -->
+                            <button onclick="abrirPDF(event, 'pdfs/REGISTRO REPSE - SEP 2024.pdf')" class="pdf-btn" style="width: 100%; padding: 14px; background-color: var(--brand-blue-dark); color: #fff; border: none;">
+                                <i class="fa-solid fa-file-contract" style="color: #fff;"></i> Registro Oficial STPS (Vigente)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CALENDARIO ANUAL -->
+    <section id="calendario" class="seccion-clara" style="position: relative; overflow: hidden;">
+        <!-- Elemento decorativo superior de fondo -->
+        <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 120px; height: 4px; background: linear-gradient(90deg, var(--brand-blue), var(--accent-red)); border-radius: 2px;"></div>
+
+        <div class="contenido-seccion" style="padding-top: 50px; padding-bottom: 50px;">
+            <h2>Calendario Anual</h2>
+            
+            <!-- Contenedor con marco decorativo y acento rojo -->
+            <div style="max-width: 650px; margin: 30px auto 0 auto; background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border-top: 5px solid var(--accent-red); text-align: center; position: relative;">
+                
+                <!-- Icono decorativo superior flotante -->
+                <div style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); width: 50px; height: 50px; background-color: var(--accent-red); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; box-shadow: 0 4px 10px rgba(230, 0, 18, 0.3);">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </div>
+
+                <h3 style="color: var(--brand-blue-dark); font-family: 'Righteous', cursive; font-size: 24px; margin-top: 15px; margin-bottom: 10px;">Póliza Anual de Mantenimiento 2026-2027</h3>
+                <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 30px;">Programación detallada de servicios preventivos por comedor y activo técnico.</p>
+
+                <!-- Botón Rojo Grande e Interactivo -->
+                <button onclick="abrirCalendarioModal()" class="btn-calendario-rojo">
+                    <i class="fa-solid fa-table-cells" style="font-size: 20px;"></i> Ver Calendario en Pantalla
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. PROGRAMACIÓN Y TURNOS -->
+    <section id="turnos" class="seccion-clara skills">
+        <div class="contenido-seccion">
+            <h2>Turnos Técnicos</h2>
+            <p style="text-align:center; margin-bottom:40px; color: var(--text-muted);">Adaptación a ventanas de inactividad (14:00 a 16:00 hrs) sin afectar producción.</p>
+            
+            <div class="fila">
+                <div class="col">
+                    <h3 style="color: var(--brand-blue-dark);">Técnico 1</h3>
+                    <div class="skill">
+                        <span style="color: #111; font-weight: bold;">Lunes / Miércoles (Descanso)</span>
+                        <div class="barra-skill">
+                            <!-- Forzamos el ancho a 0% -->
+                            <div class="progreso" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span style="color: #111; font-weight: bold;">Martes / Jueves / Viernes (13:00 - 17:00)</span>
+                        <div class="barra-skill">
+                            <!-- Forzamos el ancho a 33% -->
+                            <div class="progreso" style="width: 33%;"><span>4h</span></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span style="color: #111; font-weight: bold;">Sábado (14:00 - 02:00) / Domingo (08:00 - 20:00)</span>
+                        <div class="barra-skill">
+                            <!-- Forzamos el ancho a 100% -->
+                            <div class="progreso" style="width: 100%;"><span>12h</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3 style="color: var(--brand-blue-dark);">Técnico 2</h3>
+                    <div class="skill">
+                        <span style="color: #111; font-weight: bold;">Martes / Jueves (Descanso)</span>
+                        <div class="barra-skill">
+                            <div class="progreso" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span style="color: #111; font-weight: bold;">Lunes / Miércoles / Viernes (13:00 - 17:00)</span>
+                        <div class="barra-skill">
+                            <div class="progreso" style="width: 33%;"><span>4h</span></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span style="color: #111; font-weight: bold;">Sábado (14:00 - 02:00) / Domingo (08:00 - 20:00)</span>
+                        <div class="barra-skill">
+                            <div class="progreso" style="width: 100%;"><span>12h</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Panel Escuadrón de Respaldo Ampliado -->
+            <div class="info-panel" style="margin-top: 50px; text-align: center; border: 1.5px solid var(--accent-red); border-top: 5px solid var(--accent-red); border-radius: 8px; padding: 25px; background-color: #ffffff; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                <p style="font-size: 19px; color: #333333; line-height: 1.6; margin: 0;">
+                    <strong style="color: var(--brand-blue-dark); font-size: 21px;">
+                        <i class="fa-solid fa-users text-red" style="margin-right: 8px;"></i> Escuadrón de Respaldo (Técnicos 3 al 6):
+                    </strong> 
+                    Personal técnico en reserva para la atención oportuna de eventualidades y requerimientos extraordinarios, brindando apoyo al equipo técnico fijo cuando sea necesario.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. ESLOGAN -->
+    <section id="eslogan" class="eslogan-banner">
+        <div class="contenido-seccion" style="text-align: center;">
+            <h2 style="color: #fff; margin: 0; font-size: 38px;">"En Grupo COSIAM somos una empresa mexicana especializada en mantenimiento de equipos, comprometida con brindar soluciones confiables y atención técnica especializada para asegurar la continuidad de sus operaciones, maximizar la vida útil de sus equipos y disminuir costos de operación."</h2>
+        </div>
+    </section>
+
+    <!-- 11. CONTACTO Y DIRECTORIO -->
+    <section id="contacto" class="seccion-clara contacto">
+        <div class="contenido-seccion">
+            <h2>Directorio de Contacto</h2>
+            <p style="text-align:center; margin-bottom:50px; color: var(--text-muted);">Equipo estratégico a su entera disposición para la gestión y seguimiento del proyecto.</p>
+            
+            <div class="contenedor-tarjetas-contacto">
+                
+                <!-- Contacto 1: Director Operativo -->
+                <div class="card-contacto">
+                    <img src="./img/logo.jpg" alt="Logo Cosiam" class="logo-contacto-card">
+                    <h3 style="font-size: 19px;">German Enciso</h3>
+                    <h4>Director Operativo</h4>
+                    <div class="contacto-datos">
+                        <p><i class="fa-solid fa-mobile-screen text-blue"></i> 477 241 7744</p>
+                        <p><i class="fa-solid fa-envelope text-blue"></i> d.operativo@grupocosiam.com</p>
+                    </div>
+                </div>
+
+                <!-- Contacto 2: Directora Comercial -->
+                <div class="card-contacto">
+                    <img src="./img/logo.jpg" alt="Logo Cosiam" class="logo-contacto-card">
+                    <h3 style="font-size: 19px;">Araceli Osorno</h3>
+                    <h4>Directora Comercial</h4>
+                    <div class="contacto-datos">
+                        <p><i class="fa-solid fa-mobile-screen text-blue"></i> 477 241 7743</p>
+                        <p><i class="fa-solid fa-envelope text-blue"></i> d.comercial@grupocosiam.com</p>
+                    </div>
+                </div>
+
+                <!-- Contacto 3: Ventas (Diana) -->
+                <div class="card-contacto">
+                    <img src="./img/logo.jpg" alt="Logo Cosiam" class="logo-contacto-card">
+                    <h3 style="font-size: 19px;">Diana Paola López</h3>
+                    <h4>Ventas y Atención</h4>
+                    <div class="contacto-datos">
+                        <p><i class="fa-solid fa-mobile-screen text-blue"></i> 479 241 7740</p>
+                        <p><i class="fa-solid fa-envelope text-blue"></i> a.comercial2@grupocosiam.com</p>
+                    </div>
+                </div>
+
+                <!-- Contacto 4: Gerente Administrativo y Finanzas -->
+                <div class="card-contacto">
+                    <img src="./img/logo.jpg" alt="Logo Cosiam" class="logo-contacto-card">
+                    <h3 style="font-size: 19px;">German Fernando Enciso</h3>
+                    <h4>Gerente Administrativo y Finanzas</h4>
+                    <div class="contacto-datos">
+                        <p><i class="fa-solid fa-mobile-screen text-blue"></i> 477 367 8671</p>
+                        <p><i class="fa-solid fa-envelope text-blue"></i> it@grupocosiam.com</p>
+                    </div>
+                </div>
+
+                <!-- Contacto 5: Gerente Operativo -->
+                <div class="card-contacto">
+                    <img src="./img/logo.jpg" alt="Logo Cosiam" class="logo-contacto-card">
+                    <h3 style="font-size: 19px;">Christian Andree Enciso</h3>
+                    <h4>Gerente Operativo</h4>
+                    <div class="contacto-datos">
+                        <p><i class="fa-solid fa-mobile-screen text-blue"></i> 477 432 1255</p>
+                        <p><i class="fa-solid fa-envelope text-blue"></i> admon.operativa@grupocosiam.com</p>
+                    </div>
+                </div>
+
+                <!-- Contacto 6: Recursos Humanos -->
+                <div class="card-contacto">
+                    <img src="./img/logo.jpg" alt="Logo Cosiam" class="logo-contacto-card">
+                    <h3 style="font-size: 19px;">Yessica Monserrat Barrios</h3>
+                    <h4>Recursos Humanos</h4>
+                    <div class="contacto-datos">
+                        <p><i class="fa-solid fa-mobile-screen text-blue"></i> 477 890 1157</p>
+                        <p><i class="fa-solid fa-envelope text-blue"></i> rh@grupocosiam.com</p>
+                    </div>
+                </div>
+
+                <!-- Contacto 7: TI (Fabricio) -->
+                <div class="card-contacto">
+                    <img src="./img/logo.jpg" alt="Logo Cosiam" class="logo-contacto-card">
+                    <h3 style="font-size: 19px;">Ing. Fabricio Cárdenas</h3>
+                    <h4>TI y Soporte Técnico</h4>
+                    <div class="contacto-datos">
+                        <p><i class="fa-solid fa-mobile-screen text-blue"></i> 477 138 7230</p>
+                        <p><i class="fa-solid fa-envelope text-blue"></i> aux02@grupocosiam.com</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <p style="margin-top:20px;">Cosiam x Toyota - Mantenimiento Preventivo 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Ventana Modal para Mostrar el Calendario en el Navegador -->
+    <div id="modal-calendario" class="modal-overlay" onclick="cerrarCalendarioModal(event)">
+        <div class="modal-contenido" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-calendar-days text-red"></i> Calendario Anual de Servicios 2026-2027</h3>
+                <button onclick="cerrarCalendarioModal()" class="modal-cerrar">&times;</button>
+            </div>
+            
+            <!-- Pestañas para cambiar entre comedores -->
+            <div class="modal-tabs">
+                <button class="tab-btn active" onclick="cambiarComedorModal('central')">Comedor Central</button>
+                <button class="tab-btn" onclick="cambiarComedorModal('prensas')">Comedor Prensas</button>
+                <button class="tab-btn" onclick="cambiarComedorModal('ensamble')">Comedor Ensamble</button>
+            </div>
+
+            <!-- Contenedor de la Tabla -->
+            <div class="modal-body-table">
+                <table id="tabla-calendario-datos">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Modelo, Serie y Marca del Equipo</th>
+                            <th>Ubicación</th>
+                            <th>Frecuencia</th>
+                            <th>Oct</th>
+                            <th>Nov</th>
+                            <th>Dic</th>
+                            <th>Ene</th>
+                            <th>Feb</th>
+                            <th>Mar</th>
+                            <th>Abr</th>
+                            <th>May</th>
+                            <th>Jun</th>
+                            <th>Jul</th>
+                            <th>Ago</th>
+                            <th>Sep</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-tabla-calendario">
+                        <!-- Los datos se cargan dinámicamente con JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

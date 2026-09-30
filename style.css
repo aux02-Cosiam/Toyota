@@ -1,0 +1,718 @@
+/** 1--Base y variables Premium (Light/Blue Mode) */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;500;600;800&display=swap');
+
+:root {
+    /* Paleta Corporativa Blanca/Azul con Rojo Terciario */
+    --bg-main: #ffffff; 
+    --bg-panel: #ffffff;
+    --bg-panel-alt: #f4f7f6;
+    --brand-blue: #0056b3; 
+    --brand-blue-dark: #003d82; 
+    --accent-red: #EB0A1E; /* Rojo Toyota como acento terciario */
+    --text-main: #222222; 
+    --text-muted: #555555; 
+    --border-color: #e0e0e0; 
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: var(--bg-main);
+    /* Patrón de puntos grises sobre fondo blanco/degradado */
+    background-image: 
+        radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, #ffffff 0%, #eef1f5 100%);
+    background-size: 30px 30px, 100% 100%;
+    background-attachment: fixed;
+    color: var(--text-main);
+}
+
+.text-blue { color: var(--brand-blue); }
+.text-dark { color: #111111; }
+.text-red { color: var(--accent-red) !important; }
+
+/* Secciones con contraste limpio y luminoso */
+.seccion-oscura { 
+    /* Degradado gris muy claro (reemplaza al negro antiguo) */
+    background: linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%);
+    padding: 90px 20px; 
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.seccion-clara { 
+    /* Blanco puro con sombra interna sutil */
+    background: #ffffff;
+    padding: 90px 20px; 
+    box-shadow: inset 0 15px 40px rgba(0, 0, 0, 0.02); 
+}
+
+.contenido-seccion { max-width: 1100px; margin: auto; }
+.contenido-seccion h2 { 
+    font-family: 'Righteous', cursive; 
+    text-align: center; 
+    padding: 0 0 20px 0; 
+    font-size: 42px; 
+    letter-spacing: 1px;
+    color: var(--brand-blue-dark);
+}
+
+/** 2-Header (Glassmorphism Claro) */
+.contenedor-header {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    border-top: 4px solid var(--accent-red); /* Acento terciario */
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.contenedor-header header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+/* Ajuste para el enlace del logo en el header */
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre el logo y "x TOYOTA" */
+    font-family: 'Righteous', cursive;
+    font-size: 26px;
+    color: var(--text-main);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+/* Control de tamaño para el Logo en el Menú Superior */
+.logo-header {
+    height: 45px; 
+    width: auto;
+    object-fit: contain;
+}
+
+/* Control de tamaño y placa para el Logo en el Banner Principal */
+.logo-banner {
+    height: 90px;
+    width: auto;
+    margin-bottom: 25px;
+    border-radius: 8px; /* Suaviza las esquinas del JPG */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Efecto de placa flotante sobre el fondo oscuro */
+    background-color: #fff; /* Asegura un blanco puro de fondo */
+    padding: 5px; /* Crea un marco limpio alrededor del logo */
+}
+
+/* Ajuste móvil para el logo del banner */
+@media screen and (max-width: 700px) {
+    .logo-banner {
+        height: 60px;
+    }
+}
+
+nav ul { display: flex; align-items: center; }
+nav ul li { list-style: none; }
+nav ul li a {
+    color: #444444; /* Letras oscuras */
+    text-decoration: none;
+    font-weight: 600;
+    margin: 5px 12px;
+    padding: 5px 0;
+    transition: .3s;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover, nav ul li a.active { 
+    color: var(--brand-blue); 
+}
+
+.menu-toggle { display: none; font-size: 28px; color: var(--text-main); cursor: pointer; }
+
+/** 3-Inicio (Banner con imagen y degradado corporativo) */
+.inicio {
+    /* Degradado con menor intensidad y mayor transparencia */
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.45) 0%, rgba(200, 0, 15, 0.35) 100%), url('./img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.inicio .contenido-banner {
+    padding: 40px;
+    margin: auto;
+    text-align: center;
+    max-width: 900px; /* Un poco más ancho para que quepa bien el nuevo título */
+}
+
+.inicio .contenido-banner h1 { 
+    font-size: 55px; /* Ligeramente más pequeño para el título largo */
+    font-family: 'Righteous', cursive; 
+    margin-bottom: 20px; 
+    color: #ffffff; /* Texto blanco puro */
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); /* Sombra para legibilidad impecable */
+    line-height: 1.2;
+}
+
+.inicio .contenido-banner h2 { 
+    font-size: 22px; 
+    font-weight: 500; 
+    margin-bottom: 50px; 
+    color: #f0f0f0;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn-azul {
+    background-color: var(--brand-blue);
+    border: 2px solid var(--brand-blue);
+    padding: 15px 30px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: .3s;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-azul:hover { 
+    background-color: transparent; 
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+/** Utilidades Grid y Tarjetas */
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+
+/* Tarjetas Blancas con sombra suave */
+.kpi-card, .info-panel, .item, .acordeon-item { 
+    background: var(--bg-panel); 
+    border: 1px solid var(--border-color); 
+    border-radius: 10px; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+}
+
+.kpi-card { text-align: center; padding: 30px; border-bottom: 4px solid var(--brand-blue);}
+.kpi-card i { font-size: 40px; color: var(--brand-blue); margin-bottom: 15px; }
+.kpi-card h3, .kpi-card h4 { font-family: 'Righteous'; font-size: 24px; margin-bottom: 10px; color: var(--brand-blue-dark);}
+.kpi-card p { color: var(--text-muted); }
+
+.info-panel { padding: 25px; border-left: 4px solid var(--brand-blue); }
+.info-panel h4 { color: var(--brand-blue-dark); margin-bottom: 10px; font-size: 18px; }
+.info-panel p { color: var(--text-muted); font-size: 15px; line-height: 1.6; }
+
+/** SOW (Estilos CV adaptados a Light Mode) */
+.fila { display:flex; justify-content: space-between; }
+.fila .col { width: 50%; padding: 0 20px; }
+.fila .col h3 { font-size: 26px; font-family: 'Righteous'; margin-bottom: 25px; color:var(--brand-blue-dark);}
+.item { padding: 25px; margin-bottom: 30px; }
+.item h4 { font-size: 20px; margin-bottom: 5px; color: var(--brand-blue-dark);}
+.item .lugar { display: block; color: var(--brand-blue); font-weight: bold; margin-bottom: 10px;}
+.item p { color: var(--text-muted); }
+
+/** Acordeón de Inventario */
+.acordeon-contenedor { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+.acordeon-cabecera {
+    width: 100%; padding: 20px 25px; background-color: var(--bg-panel); border: none;
+    color: var(--text-main); font-size: 18px; font-weight: 600; text-align: left;
+    display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: 0.3s;
+}
+.acordeon-cabecera:hover { background-color: #f4f7f6; }
+.icono-giro { transition: transform 0.3s ease; color: var(--text-muted); }
+.acordeon-cabecera.activa .icono-giro { transform: rotate(180deg); color: var(--brand-blue); }
+.acordeon-contenido { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background-color: #fafbfc; border-top: 1px solid var(--border-color);}
+.desglose-grid { padding: 25px; }
+.desglose-grid ul { list-style: none; }
+.desglose-grid ul li { margin-bottom: 15px; font-size: 15px; color: var(--text-muted); line-height: 1.5; position: relative; padding-left: 20px; }
+.desglose-grid ul li::before { content: '►'; position: absolute; left: 0; color: var(--brand-blue); font-size: 12px; top: 4px; }
+
+/** Personal (Barras de Horario) */
+.skill > span { font-weight: 600; display: block; margin-bottom: 10px; color: var(--text-main); }
+.barra-skill { height: 10px; width: 100%; background-color: #e0e0e0; position: relative; margin-bottom: 30px; border-radius: 5px;}
+.progreso { background-color: var(--brand-blue); position: absolute; top: 0; left: 0; height: 10px; width: 0; transition: width 1.5s ease; border-radius: 5px; animation: llenarBarra 1.5s ease-in-out forwards;}
+@keyframes llenarBarra {
+    from {
+        max-width: 0%;
+    }
+    to {
+        max-width: 100%; /* Permite que crezca hasta el ancho (width) definido en el estilo inline del HTML */
+    }
+}
+.barra-skill span {
+    position: absolute; height: 35px; width: 35px; background-color: var(--brand-blue); color: #fff;
+    border-radius: 50px; line-height: 35px; text-align: center; top: -12px; right: -15px; font-size: 12px; font-weight: bold;
+}
+
+/** Propuesta de Inversión */
+.pricing-galeria { display:flex; justify-content:center; gap: 20px; margin-bottom: 40px;}
+.price-card {
+    background: #ffffff; border: 2px solid var(--border-color); border-radius: 10px; padding: 40px 20px;
+    text-align: center; cursor: pointer; transition: 0.3s; width: 30%; position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.price-card:hover { transform: translateY(-5px); border-color: #999;}
+.active-price { 
+    border-color: var(--brand-blue); 
+    box-shadow: 0 15px 35px rgba(0, 86, 179, 0.15); 
+    transform: scale(1.02);
+}
+.badge-recomendado {
+    position:absolute; top:-15px; left:50%; transform:translateX(-50%);
+    background: var(--accent-red); 
+    padding: 5px 15px; 
+    border-radius: 20px; 
+    font-size: 12px; 
+    font-weight:bold; 
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(235, 10, 30, 0.3);
+}
+.overlay-price h3 { font-family: 'Righteous'; font-size: 28px; margin-bottom: 5px; color: var(--brand-blue-dark);}
+.subtitle-price { color: var(--brand-blue); font-weight: bold; margin-bottom: 20px;}
+
+.results-dashboard { display:flex; gap:30px; justify-content: center;}
+.result-box { background: #ffffff; padding: 30px; border-radius: 10px; text-align: center; flex:1; max-width:400px; border: 1px solid var(--border-color); box-shadow: 0 5px 15px rgba(0,0,0,0.03);}
+.result-box h4 { margin-bottom: 15px; font-size: 14px; text-transform: uppercase; color: var(--text-muted); font-weight: 600;}
+.result-box.highlight { border-color: var(--brand-blue); background: rgba(0, 86, 179, 0.05); }
+#display-price, #display-savings { font-family: 'Righteous'; font-size: 40px; color: var(--brand-blue-dark);}
+
+/** Contacto */
+.info-contacto-card {
+    background: #ffffff; padding: 50px; border-radius: 15px; text-align: center;
+    border: 1px solid var(--border-color); box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+.profile-initials {
+    width: 100px; height: 100px; border-radius: 50%; background: var(--brand-blue);
+    margin: 0 auto 20px auto; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 86, 179, 0.2);
+}
+.profile-initials span { font-family:'Righteous'; font-size: 40px; color:#fff;}
+.info-contacto-card ul li { color: var(--text-muted); }
+
+/** Footer */
+footer { background-color: #111111; color: #fff; padding: 50px 0 30px 0; text-align: center; position: relative; width: 100%; border-top: 4px solid var(--brand-blue);}
+footer .arriba {
+    display: block; width: 50px; height: 50px; background-color: var(--brand-blue);
+    color: #fff; position: absolute; left: 50%; transform: translateX(-50%); top: -25px;
+    border-radius: 50%; line-height: 50px; font-size: 18px; box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
+}
+
+/** Responsiva */
+@media screen and (max-width: 980px) {
+    .menu-toggle { display: block; color: var(--text-main);}
+    nav { display: none; position: absolute; top: 70px; right: 0; width: 100%; background-color: #ffffff; box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-bottom: 1px solid var(--border-color);}
+    nav.active { display: block; }
+    nav ul { flex-direction: column; align-items: center; }
+    nav ul li { width: 100%; text-align: center; border-bottom: 1px solid #eee; margin:0;}
+    nav ul li a { display:block; padding: 15px; margin:0;}
+    
+    .fila { display:block; }
+    .fila .col { width: 100%; padding: 0; margin-bottom: 30px;}
+    .grid-3, .grid-2, .pricing-galeria, .results-dashboard { display: block;}
+    .kpi-card, .info-panel, .price-card, .result-box { margin-bottom: 20px; width: 100%; max-width:100%;}
+}
+
+/** Sección Calendario (Grid 12 meses) */
+.calendario-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.mes-badge {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--brand-blue-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+@media screen and (max-width: 700px) {
+    .calendario-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/** Sección Eslogan */
+.eslogan-banner {
+    background: linear-gradient(135deg, var(--brand-blue-dark) 0%, var(--brand-blue) 100%);
+    padding: 100px 20px;
+    box-shadow: inset 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/** Botones PDF para sección de Inversión */
+.pdf-links {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.pdf-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+/** Botones PDF idénticos a la referencia */
+.pdf-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    width: 100%;
+    padding: 12px 15px; /* Más altura, igual a la imagen */
+    background-color: #f8f9fa; /* Fondo gris muy claro */
+    color: var(--brand-blue-dark); /* Texto azul oscuro */
+    text-decoration: none;
+    font-size: 15px; 
+    font-weight: 700; /* Letra un poco más gruesa */
+    border-radius: 8px; /* Bordes ligeramente más redondeados */
+    border: 1px solid #dcdcdc; /* Borde sutil gris */
+    transition: all 0.3s ease;
+    cursor: pointer; 
+    font-family: 'Work Sans', sans-serif;
+}
+
+.pdf-btn i {
+    color: var(--accent-red); /* Icono en rojo Toyota */
+    font-size: 18px; 
+}
+
+/* Efecto Hover (Cuando pasas el ratón) */
+.pdf-btn:hover {
+    background-color: var(--brand-blue); /* Fondo azul sólido */
+    color: #ffffff; /* Texto blanco */
+    border-color: var(--brand-blue);
+}
+
+.pdf-btn:hover i {
+    color: #ffffff; /* El icono también se vuelve blanco */
+}
+
+/** Estilos para Listas de Alcance (Forzar color oscuro) */
+.lista-alcance {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #111111 !important; 
+    line-height: 1.6;
+}
+
+.lista-alcance li {
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.lista-alcance strong {
+    color: #000000 !important; /* Negro puro */
+}
+
+/** Tarjetas de Beneficios (Forzar color oscuro) */
+.card-beneficio-clean p {
+    font-size: 14px;
+    color: #111111 !important; 
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+/** Tarjetas de Beneficios (Estilo Clean borders) */
+.card-beneficio-clean {
+    background: #ffffff;
+    border: 1px solid #eaeaea; /* Borde gris muy suave */
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-beneficio-clean:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.card-beneficio-clean i {
+    font-size: 38px;
+    margin-bottom: 15px;
+    color: var(--accent-red); /* Icono Rojo */
+}
+
+.card-beneficio-clean h4 {
+    font-family: 'Righteous', cursive;
+    font-size: 22px;
+    color: var(--brand-blue-dark); /* Título Azul */
+    margin-bottom: 10px;
+}
+
+.card-beneficio-clean p {
+    font-size: 14px;
+    color: #b0b0b0; /* Texto gris claro como en la imagen de referencia */
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+/** Cuadrícula de 4 columnas para los beneficios */
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Responsividad para tablets y móviles */
+@media screen and (max-width: 980px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .grid-4 {
+        grid-template-columns: 1fr; /* 1 columna en celulares */
+    }
+}
+
+/** Estilos para la Ventana Modal del Calendario Excel */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-contenido {
+    background-color: #ffffff;
+    width: 95%;
+    max-width: 1200px;
+    height: 85vh;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    overflow: hidden;
+    animation: fadeInModal 0.3s ease;
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header {
+    background-color: var(--brand-blue-dark);
+    color: #ffffff;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-family: 'Righteous', cursive;
+    font-size: 20px;
+}
+
+.modal-cerrar {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.modal-tabs {
+    display: flex;
+    background-color: #f1f3f5;
+    padding: 10px 20px;
+    gap: 10px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.tab-btn {
+    padding: 8px 20px;
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+    color: var(--text-muted);
+    transition: all 0.2s;
+}
+
+.tab-btn.active {
+    background-color: var(--brand-blue);
+    color: #ffffff;
+}
+
+.modal-body-table {
+    flex: 1;
+    overflow-y: auto; /* Scroll vertical automático */
+    overflow-x: auto; /* Scroll horizontal para los meses */
+    padding: 20px;
+    background-color: #fff;
+}
+
+#tabla-calendario-datos {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+#tabla-calendario-datos th, #tabla-calendario-datos td {
+    border: 1px solid #e9ecef;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Fijar la cabecera de la tabla al hacer scroll hacia abajo */
+#tabla-calendario-datos th {
+    background-color: #f8f9fa;
+    color: var(--brand-blue-dark);
+    font-weight: 700;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+#tabla-calendario-datos tr:nth-child(even) {
+    background-color: #fcfcfc;
+}
+
+/* Botón Rojo Destacado para el Calendario */
+.btn-calendario-rojo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 420px;
+    padding: 16px 25px;
+    background-color: var(--accent-red);
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: 'Work Sans', sans-serif;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(230, 0, 18, 0.35);
+    transition: all 0.3s ease;
+}
+
+.btn-calendario-rojo:hover {
+    background-color: #c5000f;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(230, 0, 18, 0.5);
+}
+
+/* =========================================
+   DISEÑO DIRECTORIO DE CONTACTOS MÚLTIPLES
+   ========================================= */
+
+.contenedor-tarjetas-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-contacto {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--accent-red);
+    width: 100%;
+    max-width: 320px; /* Tamaño ideal para que entren varias por fila */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-contacto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.logo-contacto-card {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.card-contacto h3 {
+    color: var(--brand-blue-dark);
+    font-family: 'Righteous', cursive;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.card-contacto h4 {
+    color: var(--accent-red);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.contacto-datos {
+    border-top: 1px solid #eaeaea;
+    padding-top: 20px;
+    text-align: left;
+}
+
+.contacto-datos p {
+    font-size: 14px;
+    color: #444444;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.contacto-datos p i {
+    width: 25px;
+    font-size: 16px;
+    text-align: center;
+    margin-right: 10px;
+}
