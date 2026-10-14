@@ -785,3 +785,132 @@ footer .arriba {
         justify-content: center;
     }
 }
+
+/* =========================================
+   ORGANIGRAMA (EQUIPO TOYOTA)
+   ========================================= */
+.contenedor-organigrama {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px 0;
+}
+
+.nodo-principal {
+    display: inline-block;
+    background-color: var(--brand-blue-dark);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: 'Righteous', cursive;
+    border-bottom: 4px solid var(--accent-red);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 2;
+}
+
+/* Dibujo de líneas conectoras para PC */
+.lineas-conexion {
+    position: relative;
+    height: 30px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.linea-vertical-central {
+    width: 2px;
+    height: 30px;
+    background-color: var(--brand-blue);
+    margin: 0 auto;
+}
+
+.linea-horizontal {
+    width: 65%; /* Conecta visualmente las 3 cajas */
+    height: 2px;
+    background-color: var(--brand-blue);
+    margin: 0 auto;
+}
+
+/* Fila de los roles */
+.rama-operativa {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.nodo-hijo {
+    flex: 1;
+    background: #ffffff;
+    padding: 25px 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--brand-blue);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nodo-hijo.rojo {
+    border-top: 4px solid var(--accent-red);
+}
+
+.nodo-hijo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.linea-vertical-hijo {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 30px;
+    background-color: var(--brand-blue);
+}
+
+.nodo-hijo i {
+    font-size: 28px;
+    color: var(--accent-red);
+    margin-bottom: 12px;
+}
+
+.nodo-hijo h4 {
+    color: var(--brand-blue-dark);
+    font-size: 17px;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* Adaptación para Celulares */
+@media screen and (max-width: 768px) {
+    .linea-horizontal { display: none; }
+    .linea-vertical-hijo { display: none; }
+    .linea-vertical-central { height: 20px; }
+    
+    .rama-operativa {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nodo-hijo {
+        border-left: 4px solid var(--brand-blue);
+        border-top: none;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .nodo-hijo.rojo {
+        border-left: 4px solid var(--accent-red);
+        border-top: none;
+    }
+    
+    .nodo-hijo i {
+        margin-bottom: 0;
+        margin-right: 15px;
+        font-size: 24px;
+    }
+}
